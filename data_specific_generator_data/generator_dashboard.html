@@ -20,6 +20,9 @@
     <!-- sidebar link -->
     <link rel="stylesheet" href="sidebar.css">
 
+    <!-- navbar styling link -->
+    <link rel="stylesheet" href="navbar.css">
+
     <!-- style -->
     <style>
         body,
@@ -93,12 +96,12 @@
 <body style="background-color: #B0DFE5B5;">
     <!-- Navbar -->
 
-    <nav class="navbar navbar-expand-md navbar-white"
-    style="background-color: white; border-bottom: 1px solid rgb(219, 216, 216);">
+    <nav class="navbar navbar-expand-md"
+    style="border-bottom: 1px solid rgb(219, 216, 216);">
     <!-- Container wrapper -->
     <div class="container-fluid">
         <!-- Navbar brand -->
-        <a class="navbar-brand text-dark" style="font-weight: 500; font-size: 25px;" href="#">Brand</a>
+        <a class="navbar-brand text-light" style="font-weight: 500; font-size: 25px;" href="#">Brand</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -114,7 +117,7 @@
                     <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
                 </div>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-dark" style="font-weight: 500; font-size: 18px;"
+                    <a class="nav-link dropdown-toggle text-light" style="font-weight: 500; font-size: 18px;"
                         href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <i
                             class="bi bi-person-fill"></i>
                         Profile</a>
@@ -387,7 +390,7 @@
                     type: 'line',
                     label: 'data1',
                     data: [8, 2, 6, 3, 8, 1, 11, 9, 7],
-                    backgroundColor: 'rgba(64,110,113,0.8)',
+                    backgroundColor: 'rgb(64, 116, 116)',
                     // bordertype: 'line'Color: 'rgb(250, 236, 37)',
                     borderWidth: 1,
                     fill: true,
@@ -397,7 +400,7 @@
                     // ,
                     label: 'data2',
                     data: [0, 4, 5, 6, 2, 6, 6],
-                    backgroundColor: 'rgba(99,180,181,0.8)',
+                    backgroundColor: 'rgb(70, 196, 219, 0.8)',
                     // borderColor: 'rgb(252, 158, 17)',
                     borderWidth: 1,
                     fill: true,
@@ -424,14 +427,13 @@
             if (toggleSwitch.checked) {
                 // set dark mode styles
                 body.style.backgroundColor = '#262626';
-                navbar.style.backgroundColor = '#262626';
+                navbar.style.backgroundColor = '#46C4DB';
                 chartBackground.style.backgroundColor = '#262626';
                 filterBar.style.backgroundColor = 'rgb(64,64,64)';
-                // sideBar.style.backgroundColor = 'rgb(64,64,64)';
+                sideBar.style.backgroundColor = '#46C4DB';
                 filterBar.classList.replace("text-dark", "text-light");
-                // sideBar.classList.add("text-light");
-                navbar.querySelectorAll('.text-dark').forEach(el => el.classList.replace('text-dark', 'text-light'));
-                navbar.querySelectorAll('.dropdown-item').forEach(el => el.classList.replace('text-dark', 'text-light'));
+                // navbar.querySelectorAll('.text-dark').forEach(el => el.classList.replace('text-dark', 'text-light'));
+                // navbar.querySelectorAll('.dropdown-item').forEach(el => el.classList.replace('text-dark', 'text-light'));
                 classWithPad.forEach(div => {
                     div.style.backgroundColor = '#404040';
                 });
@@ -450,13 +452,12 @@
             } else {
                 // set light mode styles
                 body.style.backgroundColor = '#DFE1E2';
-                navbar.style.backgroundColor = 'white';
+                navbar.style.backgroundColor = '#282F39';//same as sidebar
                 filterBar.classList.replace('text-light', 'text-dark');
                 filterBar.style.backgroundColor = 'white';
-                // sideBar.classList.remove('text-light');
-                // sideBar.style.backgroundColor = 'white';
-                navbar.querySelectorAll('.text-light').forEach(el => el.classList.replace('text-light', 'text-dark'));
-                navbar.querySelectorAll('.dropdown-item').forEach(el => el.classList.replace('text-light', 'text-dark'));
+                sideBar.style.backgroundColor = '#282F39';
+                // navbar.querySelectorAll('.text-light').forEach(el => el.classList.replace('text-light', 'text-dark'));
+                // navbar.querySelectorAll('.dropdown-item').forEach(el => el.classList.replace('text-light', 'text-dark'));
                 classWithPad.forEach(div => {
                     div.style.backgroundColor = '#fff';
                 });
