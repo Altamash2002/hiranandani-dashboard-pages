@@ -1,6 +1,11 @@
  /*--------------------------------------------------------------
 # Sidebar styling
 --------------------------------------------------------------*/
+html , body{
+  min-height: 100vh;
+  position: relative;
+}
+
 a {
     text-decoration: none;
   }
@@ -20,8 +25,7 @@ a {
     position: absolute;
     top: 64px;
     left: 0;
-    height: 100%;
-    width: 255px;
+    bottom: 0;
     z-index: 996;
     transition: all 0.3s;
     padding: 20px;
